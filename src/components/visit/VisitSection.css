@@ -1,0 +1,200 @@
+/* VisitSection.css */
+
+.visit-section {
+    background-color: #f8f8f8;
+    padding: 60px 20px;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    animation: fadeUp 1s ease-in-out;
+  }
+  
+  .visit-intro {
+    text-align: center;
+    margin-bottom: 40px;
+  }
+  
+  .subheading {
+    text-transform: uppercase;
+    color: #888;
+    letter-spacing: 2px;
+    margin-bottom: 10px;
+    opacity: 0;
+    animation: fadeIn 1s forwards;
+  }
+  
+  .main-heading {
+    font-size: 36px;
+    font-weight: bold;
+    margin-bottom: 10px;
+    animation: slideUp 0.8s ease-out;
+  }
+  
+  .location-description {
+    color: #666;
+    font-size: 16px;
+    max-width: 500px;
+    margin: 0 auto;
+  }
+  
+  .visit-grid {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 30px;
+    align-items: center;
+    max-width: 1100px;
+    margin: 0 auto;
+  }
+  
+  .map-container iframe {
+    width: 100%;
+    height: 350px;
+    border: 0;
+    border-radius: 12px;
+    box-shadow: 0 6px 20px rgba(0, 0, 0, 0.15);
+    transition: transform 0.3s ease;
+  }
+  
+  .map-container iframe:hover {
+    transform: scale(1.02);
+  }
+  
+  .contact-card {
+    background-color: #fff;
+    border-radius: 12px;
+    padding: 30px;
+    box-shadow: 0 6px 20px rgba(0, 0, 0, 0.1);
+    animation: slideRight 1s ease-out;
+  }
+  
+  .contact-card h3 {
+    font-size: 24px;
+    margin-bottom: 20px;
+  }
+  
+  .info-block {
+    display: flex;
+    align-items: flex-start;
+    margin-bottom: 20px;
+  }
+  
+  .icon {
+    color: #b3812f;
+    font-size: 20px;
+    margin-right: 15px;
+    margin-top: 4px;
+  }
+  
+  .info-text small {
+    display: block;
+    color: #888;
+    font-size: 13px;
+  }
+  
+  .info-text p {
+    margin: 3px 0 0;
+    font-size: 15px;
+    color: #333;
+  }
+  
+  .button-group {
+    display: flex;
+    gap: 15px;
+    flex-wrap: wrap;
+    margin-top: 20px;
+  }
+  
+  .action-btn {
+    background-color: #b3812f;
+    color: white;
+    padding: 10px 20px;
+    border-radius: 25px;
+    text-decoration: none;
+    font-size: 15px;
+    font-weight: 500;
+    transition: all 0.3s ease;
+    display: inline-block;
+  }
+  
+  .action-btn:hover {
+    background-color: #a17228;
+    transform: scale(1.05);
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.2);
+  }
+  
+  .call {
+    background-color: #333;
+  }
+  
+  .call:hover {
+    background-color: #222;
+  }
+  
+  /* Responsive Layouts */
+  @media (max-width: 900px) {
+    .visit-grid {
+      grid-template-columns: 1fr;
+    }
+  
+    .map-container iframe {
+      height: 300px;
+    }
+  }
+  
+  @media (max-width: 500px) {
+    .main-heading {
+      font-size: 28px;
+    }
+  
+    .location-description {
+      font-size: 14px;
+    }
+  
+    .contact-card {
+      padding: 20px;
+    }
+  
+    .action-btn {
+      padding: 10px 16px;
+      font-size: 14px;
+    }
+  }
+  
+  /* Animations */
+  @keyframes fadeUp {
+    from {
+      opacity: 0;
+      transform: translateY(40px);
+    }
+    to {
+      opacity: 1;
+      transform: translateY(0);
+    }
+  }
+  
+  @keyframes fadeIn {
+    to {
+      opacity: 1;
+    }
+  }
+  
+  @keyframes slideUp {
+    from {
+      transform: translateY(20px);
+      opacity: 0;
+    }
+    to {
+      transform: translateY(0px);
+      opacity: 1;
+    }
+  }
+  
+  @keyframes slideRight {
+    from {
+      opacity: 0;
+      transform: translateX(30px);
+    }
+    to {
+      opacity: 1;
+      transform: translateX(0px);
+    }
+  }
+  

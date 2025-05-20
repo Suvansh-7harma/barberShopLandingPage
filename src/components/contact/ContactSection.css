@@ -1,0 +1,211 @@
+/* ContactSection.css */
+
+.contact-section {
+    background-color: #F7F7F7;
+    padding: 4rem 1.5rem;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    color: #000000;
+    text-align: center;
+  }
+  
+  /* Intro */
+  .contact-intro .subheading {
+    text-transform: uppercase;
+    color: #FFB22C;
+    font-weight: 600;
+    letter-spacing: 1.5px;
+    margin-bottom: 0.5rem;
+    font-size: 0.9rem;
+    animation: fadeIn 1.2s ease forwards;
+    opacity: 0;
+  }
+  
+  .contact-intro .main-heading {
+    font-size: 2.6rem;
+    font-weight: 800;
+    margin-bottom: 0.6rem;
+    animation: slideUp 1s ease forwards;
+    opacity: 0;
+    color: #854836;
+  }
+  
+  .contact-intro .description {
+    max-width: 600px;
+    margin: 0 auto;
+    font-size: 1.1rem;
+    line-height: 1.5;
+    color: #000000cc;
+    margin-bottom: 3rem;
+  }
+  
+  /* Two-column layout */
+  .contact-content {
+    display: flex;
+    gap: 3rem;
+    justify-content: center;
+    max-width: 900px;
+    margin: 0 auto;
+    align-items: flex-start;
+  }
+  
+  /* Left - Info Bars */
+  .contact-info {
+    flex: 1;
+    display: flex;
+    flex-direction: column;
+    gap: 1.8rem;
+  }
+  
+  .info-bar {
+    display: flex;
+    align-items: flex-start;
+    background: #fff;
+    padding: 1.2rem 1.5rem;
+    border-radius: 12px;
+    box-shadow: 0 4px 6px rgb(133 72 54 / 0.15);
+    cursor: default;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+  }
+  
+  .info-bar:hover,
+  .info-bar:focus {
+    transform: translateY(-5px);
+    box-shadow: 0 8px 12px rgb(133 72 54 / 0.3);
+    outline: none;
+  }
+  
+  .info-icon {
+    color: #FFB22C;
+    font-size: 1.8rem;
+    margin-right: 1rem;
+    flex-shrink: 0;
+    margin-top: 2px;
+  }
+  
+  .info-text strong {
+    display: block;
+    font-size: 1.1rem;
+    color: #854836;
+    margin-bottom: 0.25rem;
+    text-align: left;
+  }
+  
+  .info-text p {
+    font-size: 0.95rem;
+    color: #000000cc;
+    line-height: 1.4;
+    white-space: pre-line;
+    text-align: left;
+  }
+  
+  /* Right - Booking Form */
+  .booking-form {
+    flex: 1;
+    background: #fff;
+    padding: 2rem 2.5rem;
+    border-radius: 12px;
+    box-shadow: 0 6px 10px rgb(133 72 54 / 0.15);
+    text-align: left;
+    max-width: 450px;
+  }
+  
+  .booking-form label {
+    display: block;
+    font-weight: 600;
+    color: #854836;
+    margin-bottom: 0.35rem;
+    font-size: 0.95rem;
+  }
+  
+  .booking-form .required {
+    color: #FFB22C;
+  }
+  
+  .booking-form input,
+.booking-form select,
+.booking-form textarea {
+  box-sizing: border-box;  /* Include padding and border in width */
+  width: 100%;             /* Full width of parent container */
+  padding: 0.55rem 1rem;   /* Same padding for all */
+  margin-bottom: 1rem;
+  border-radius: 8px;
+  border: 2px solid #854836;
+  font-size: 1rem;
+  color: #000000;
+  font-family: inherit;
+  resize: vertical;
+  display: block;          /* Ensure block to control width */
+}
+
+  .booking-form input:focus,
+  .booking-form select:focus,
+  .booking-form textarea:focus {
+    border-color: #FFB22C;
+    box-shadow: 0 0 5px #FFB22Caa;
+    outline: none;
+  }
+  
+  .error-msg {
+    color: #d33;
+    font-size: 0.85rem;
+    margin-top: -0.75rem;
+    margin-bottom: 1rem;
+    font-style: italic;
+  }
+  
+  .submit-btn {
+    display: inline-block;
+    background-color: #FFB22C;
+    color: #4b2c20;
+    font-weight: 700;
+    border: none;
+    padding: 0.9rem 2rem;
+    border-radius: 30px;
+    cursor: pointer;
+    font-size: 1.15rem;
+    transition: background-color 0.3s ease, box-shadow 0.3s ease;
+    width: 100%;
+    margin-top: 0.5rem;
+  }
+  
+  .submit-btn:hover,
+  .submit-btn:focus {
+    background-color: #e6a71a;
+    box-shadow: 0 4px 15px #e6a71aaa;
+    outline: none;
+  }
+  
+  /* Animations */
+  @keyframes fadeIn {
+    to {
+      opacity: 1;
+    }
+  }
+  
+  @keyframes slideUp {
+    from {
+      transform: translateY(20px);
+      opacity: 0;
+    }
+    to {
+      transform: translateY(0);
+      opacity: 1;
+    }
+  }
+  
+  /* Responsive */
+  @media (max-width: 768px) {
+    .contact-content {
+      flex-direction: column;
+    }
+  
+    .contact-info,
+    .booking-form {
+      max-width: 100%;
+    }
+  
+    .booking-form {
+      margin-top: 2rem;
+    }
+  }
+  
