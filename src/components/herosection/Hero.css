@@ -105,12 +105,35 @@
     background-color: var(--primary);
     color: var(--light);
   }
+  .book-now-btn {
+    background-color: #854836;     /* Rich brown tone */
+    color: #ffffff;
+    border: none;
+    padding: 0.75rem 1.5rem;
+    border-radius: 30px;
+    font-size: 1rem;
+    font-weight: 600;
+    cursor: pointer;
+    transition: background-color 0.3s ease, transform 0.2s ease;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.15);
+  }
+  
+  .book-now-btn:hover {
+    background-color: #a0583f;     /* Slightly lighter brown */
+    transform: scale(1.05);
+  }
+  
+  .book-now-btn:active {
+    transform: scale(0.98);
+  }
+  
   
   .scroll-down {
     font-size: 24px;
     cursor: pointer;
     color: var(--primary);
     user-select: none;
+    margin-left: 1rem;
   }
   
   .hero-right {
@@ -149,4 +172,40 @@
       width: 80%;
     }
   }
+
+  .scroll-top-btn {
+    position: fixed;
+    bottom: 1.5rem;
+    right: 1.5rem;
+    width: 48px;
+    height: 48px;
+    background-color: #854836;
+    color: #fff;
+    border: none;
+    border-radius: 50%;
+    font-size: 1.2rem;
+    cursor: pointer;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.3);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    transition: background-color 0.3s ease, transform 0.2s ease;
+    z-index: 999;
+  }
+  
+  .scroll-top-btn:hover {
+    background-color: #a0583f;
+    transform: scale(1.1);
+  }
+  
+  @media (max-width: 768px) {
+    .scroll-top-btn {
+      bottom: 1rem;
+      right: 1rem;
+      width: 42px;
+      height: 42px;
+      font-size: 1rem;
+    }
+  }
+  
   

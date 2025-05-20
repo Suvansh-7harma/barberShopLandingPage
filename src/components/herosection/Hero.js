@@ -1,9 +1,22 @@
-import React from 'react';
+import React, { useEffect, useState } from 'react';
 import './Hero.css';
 import { motion } from 'framer-motion';
 import heroImage from '../../assets/hero.webp';
+import { FaArrowUp } from 'react-icons/fa';
 
 const Hero = () => {
+  const [showScrollTop, setShowScrollTop] = useState(false);
+
+  useEffect(() => {
+    const onScroll = () => setShowScrollTop(window.scrollY > 200);
+    window.addEventListener('scroll', onScroll);
+    return () => window.removeEventListener('scroll', onScroll);
+  }, []);
+
+  const scrollToTop = () => {
+    window.scrollTo({ top: 0, behavior: 'smooth' });
+  };
+
   return (
     <section className="hero-section">
       <div className="hero-container">
@@ -63,7 +76,7 @@ const Hero = () => {
             className="hero-buttons"
           >
             <button className="btn btn-primary">Services</button>
-            <button className="btn btn-secondary">Book Now</button>
+            <button className="book-now-btn">Book Now</button>
           </motion.div>
 
           <motion.div
@@ -89,6 +102,13 @@ const Hero = () => {
           <img src={heroImage} alt="Barber" className="hero-image" />
         </motion.div>
       </div>
+
+      {/* Scroll to Top Button */}
+      {showScrollTop && (
+        <button className="scroll-top-btn" onClick={scrollToTop}>
+          <FaArrowUp />
+        </button>
+      )}
     </section>
   );
 };
