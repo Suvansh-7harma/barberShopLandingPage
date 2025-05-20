@@ -1,19 +1,22 @@
 import React, { useState } from 'react';
 import './Gallery.css';
 import { FaEye, FaTimes } from 'react-icons/fa';
+import aboutImg from '../../assets/about.jpg';
+import galimg3 from '../../assets/gallery1.jpg';
+import galimg1 from '../../assets/gallery3.jpg';
 
 const galleryImages = [
-  { src: 'https://images.unsplash.com/photo-1598257006465-6f6e530d3b96?auto=format&fit=crop&w=800&q=80', alt: 'Classic haircut in progress' },
-  { src: '/images/gallery2.jpg', alt: 'Modern skin fade' },
-  { src: '/images/gallery3.jpg', alt: 'Barbershop interior' },
-];
-
+    { src: galimg1, alt: 'Modern skin fade' },
+    { src: aboutImg, alt: 'Modern skin fade' },
+    { src: galimg3, alt: 'Modern skin fade' }
+    
+  ];
 const Gallery = () => {
   const [selectedImage, setSelectedImage] = useState(null);
 
   const openModal = (img) => {
     setSelectedImage(img);
-    document.body.style.overflow = 'hidden'; // Prevent background scroll
+    document.body.style.overflow = 'hidden';
   };
 
   const closeModal = () => {

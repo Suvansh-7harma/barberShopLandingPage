@@ -1,12 +1,14 @@
 import React from 'react';
 import './MeetOurBarbers.css';
 import { FaFacebookF, FaInstagram } from 'react-icons/fa';
-
+import img1 from "../../assets/staff1.jpg";
+import img2 from "../../assets/staff2.jpg";
+import img3 from "../../assets/gallery1.jpg";
 const barbers = [
   {
     name: 'Jason Rodriguez',
     title: 'Owner & Master Barber',
-    image: 'https://images.unsplash.com/photo-1620799140408-6f9a729b367e?auto=format&fit=crop&w=800&q=80',
+    image: img1,
     bio: 'With over 15 years of experience, Jason founded PMC Barbershop to bring premium men\'s grooming services to Denton. Specializing in classic cuts and straight razor shaves, he combines traditional techniques with modern styles.',
     facebook: '#',
     instagram: '#',
@@ -14,7 +16,7 @@ const barbers = [
   {
     name: 'Marcus Lee',
     title: 'Senior Barber',
-    image: 'https://images.unsplash.com/photo-1604908177304-aea7c2303bcd?auto=format&fit=crop&w=800&q=80',
+    image: img2,
     bio: 'Marcus is known for his sharp fades and stylish trims. With a passion for grooming, he ensures every client walks out with confidence.',
     facebook: '#',
     instagram: '#',
@@ -22,7 +24,7 @@ const barbers = [
   {
     name: 'Alicia Grant',
     title: 'Creative Stylist',
-    image: 'https://images.unsplash.com/photo-1613487734774-3bc24c8de2c4?auto=format&fit=crop&w=800&q=80',
+    image: img3,
     bio: 'Alicia brings flair and creativity to every cut. Her expert styling skills and vibrant energy make her a client favorite.',
     facebook: '#',
     instagram: '#',
